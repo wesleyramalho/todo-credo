@@ -20,12 +20,17 @@ export const ListItem: React.FC<ListItemProps> = ({
       aria-label={`Mark "${item.description}" as ${
         item.isCompleted ? "Not completed" : "done"
       }`}
+      id={`todo-item-${item.id}`}
     />
-    <span
-      style={{ textDecoration: item.isCompleted ? "line-through" : "none" }}
+    <label
+      htmlFor={`todo-item-${item.id}`}
+      style={{
+        textDecoration: item.isCompleted ? "line-through" : "none",
+        cursor: "pointer",
+      }}
     >
       {item.description}
-    </span>
+    </label>
     <button
       onClick={() => onRemoveItem(item)}
       aria-label={`Remove ${item.description}`}

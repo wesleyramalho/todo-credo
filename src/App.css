@@ -41,7 +41,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-span {
+label {
   flex-grow: 1;
 }
 
