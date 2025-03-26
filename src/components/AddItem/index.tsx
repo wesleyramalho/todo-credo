@@ -10,7 +10,7 @@ export const AddItem = ({ onAddItem }: AddItemProps) => {
   const [newItemDescription, setNewItemDescription] = useState("");
 
   const addItem = () => {
-    if (!newItemDescription) {
+    if (!newItemDescription.trim()) {
       return;
     }
     const newItem: TodoItemType = {
