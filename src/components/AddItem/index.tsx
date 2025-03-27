@@ -1,6 +1,5 @@
 import { KeyboardEvent, useState } from "react";
 import { TodoItemType } from "../../types";
-import { generateItemId } from "../../utils";
 
 interface AddItemProps {
   onAddItem: (item: TodoItemType) => void;
@@ -16,7 +15,6 @@ export const AddItem = ({ onAddItem }: AddItemProps) => {
     const newItem: TodoItemType = {
       description: newItemDescription,
       isCompleted: false,
-      id: generateItemId(),
     };
     onAddItem(newItem);
     setNewItemDescription("");
