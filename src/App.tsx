@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Todo list</h1>
+      <h1>Oi Lucas</h1>
       <AddItem onAddItem={addItem} />
       <ul>
         {todoList.map((item: TodoItemType) => {
